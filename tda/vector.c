@@ -3,7 +3,7 @@
 #include "vector.h"
 
 typedef struct _vector{
-   void** a;
+   VECTOR_ELEMENT* a;
    int size;
    int max_size;
 } vector;
@@ -64,9 +64,9 @@ int vector_isempty(vector* v){
  * 
  * @param v 
  * @param index 
- * @return void* 
+ * @return VECTOR_ELEMENT 
  */
-void* vector_get(vector* v, int index){
+VECTOR_ELEMENT vector_get(vector* v, int index){
    /*** COMPLETAR ***/
 }  
 
@@ -76,9 +76,9 @@ void* vector_get(vector* v, int index){
  * 
  * @param v 
  * @param index 
- * @return void* 
+ * @return VECTOR_ELEMENT 
  */
-void* vector_set(vector* v, int index, void* value){
+VECTOR_ELEMENT vector_set(vector* v, int index, VECTOR_ELEMENT value){
    /*** COMPLETAR ***/
 }
 
@@ -88,7 +88,7 @@ void* vector_set(vector* v, int index, void* value){
  * @param v 
  * @param value 
  */
-int vector_add(vector* v, void* value){
+int vector_add(vector* v, VECTOR_ELEMENT value){
    /*** COMPLETAR ***/
 }
 
@@ -100,7 +100,7 @@ int vector_add(vector* v, void* value){
  * @param index 
  * @param value 
  */
-int vector_insert(vector* v, int index, void* value){
+int vector_insert(vector* v, int index, VECTOR_ELEMENT value){
    /*** COMPLETAR ***/
 }
 
@@ -111,7 +111,7 @@ int vector_insert(vector* v, int index, void* value){
  * @param v 
  * @param index 
  */
-void* vector_remove(vector* v, int index){
+VECTOR_ELEMENT vector_remove(vector* v, int index){
    /*** COMPLETAR ***/ 
 }
 
@@ -119,6 +119,6 @@ void* vector_remove(vector* v, int index){
  * @brief print the vector
  * 
  */
-void vector_print(vector* v, void (*print)(void*)){
+void vector_print(vector* v, void (*print)(VECTOR_ELEMENT)){
    /*** COMPLETAR ***/
 }

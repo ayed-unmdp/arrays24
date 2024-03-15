@@ -1,6 +1,8 @@
 #ifndef _VECTOR
 #define _VECTOR
 
+#define VECTOR_ELEMENT int
+
 typedef struct _vector vector;
 
 vector* vector_new(int ini_size);
@@ -19,22 +21,22 @@ int vector_isfull(vector* v);
 int vector_isempty(vector* v);
 // Devuelve 0 si no está vacío y 1 si está vacío.
 
-void* vector_get(vector* v, int index);
+VECTOR_ELEMENT vector_get(vector* v, int index);
 // Permite obtener el valor de una posición del vector
 
-void* vector_set(vector* v, int index, void* value);
+VECTOR_ELEMENT vector_set(vector* v, int index, VECTOR_ELEMENT value);
 // Permite reemplazar el valor de una posición del vector
 
-int vector_add(vector* v, void* value);
+int vector_add(vector* v, VECTOR_ELEMENT value);
 // Permite agregar un elemento al final
 
-int vector_insert(vector* v, int index, void* value);
+int vector_insert(vector* v, int index, VECTOR_ELEMENT value);
 // Permite agregar un elemento en una posición determinada.
 
-void* vector_remove(vector* v, int index);
+VECTOR_ELEMENT vector_remove(vector* v, int index);
 // Permite eliminar un elemento del vector
 
-void vector_print(vector* v, void (*print)(void*));
+void vector_print(vector* v, void (*print)(VECTOR_ELEMENT));
 // Permite imprimir un vector por consola
 
 #endif
